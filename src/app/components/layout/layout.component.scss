@@ -1,0 +1,80 @@
+.layout-wrapper {
+    display: flex;
+    .sidebar-wrapper {
+        background-color: #165C7D;
+        display: flex;
+        flex-direction: column;
+        width: 84px;
+        height: 100vw;
+        padding: 1rem;
+        picture.logo-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                cursor: pointer;
+                width: 60px;
+                height: 60px;
+                object-fit: contain;
+            }
+        }
+        nav.navbar-wraper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .link-item {
+                padding-top: 35px;
+                &>.icon-white {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    .content-wrapper {
+        background-color: #E7EEF1;
+        width: 100%;
+        .header-wrapper,
+        .content {
+            padding: 1rem;
+        }
+        .content {
+            margin-top: 2rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            .step-content-wrapper {
+                margin-top: 1.5rem;
+                align-self: flex-start;
+            }
+        }
+        .header-wrapper {
+            background-color: white;
+            h1.page-title {
+                font-size: 24px;
+                line-height: 32px;
+                text-transform: uppercase;
+                margin: 0;
+                font-weight: bold;
+            }
+            .breadcrump-wrapper {
+                display: flex;
+                a,
+                span {
+                    color: #787878;
+                    font-size: 12px;
+                }
+                a {
+                    text-decoration: none;
+                }
+                span {
+                    margin-right: 0.5rem;
+                    &:first-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

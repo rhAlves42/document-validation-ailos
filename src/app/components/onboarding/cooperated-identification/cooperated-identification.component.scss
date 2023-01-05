@@ -1,0 +1,61 @@
+.cooperated-identification-wrapper {
+    h2 {
+        font-weight: 400;
+        margin: 0;
+        margin-bottom: 0.5rem;
+    }
+    p.description {
+        color: #165C7D;
+        margin: 0;
+        font-size: 13px;
+    }
+    .input-wrapper {
+        display: flex;
+        margin-top: 1rem;
+        width: 80%;
+        align-items: center;
+        label {
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            margin-bottom: .2rem;
+            min-width: 250px;
+            input {
+                text-indent: 5px;
+                height: 30px;
+                border-radius: .2rem;
+                padding: 1px;
+                &.has-error {
+                    border: 1px solid red;
+                }
+                &,
+                &:focus,
+                &:focus-visible {
+                    border: 1px solid rgba(22, 92, 125, 0.4);
+                }
+            }
+        }
+        button.custom-button {
+            span {
+                color: white;
+            }
+            min-width: 182.7px;
+            cursor: pointer;
+            margin-left: 1rem;
+            border: none;
+            outline: none;
+            background-color: #165C7D;
+            padding: 0.5rem 2rem;
+            margin-top: 18px;
+            border-radius: .1rem;
+            max-height: 30px;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            justify-content: center;
+            &:disabled {
+                opacity: .5;
+            }
+        }
+    }
+}

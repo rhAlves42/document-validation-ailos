@@ -1,0 +1,31 @@
+<section class="cooperated-identification-wrapper">
+    <h2>
+        Informe o CPF do futuro cooperado (a)
+    </h2>
+    <p class="description">
+        Se necessário, você poderá duplicar uma conta existente ou pausar e retonar este cadastro futuramente.
+    </p>
+    <p class="description">Digite apenas os números (sem pontos ou traços)</p>
+
+    <div class="input-wrapper">
+        <label htmlFor="cpf-input">CPF
+      <input id="input-search" [ngClass]="{'has-error': !isCpfValid }" [ngModel]="cpfValue"
+        (ngModelChange)="onInputChange($event)" maxlength="14" minlength="14" type="text" name="cpf-input"
+        placeholder="000.000.000-00" />
+    </label>
+        <button [disabled]="!isCpfValid" class="custom-button" (click)="makeSearch()">
+      <div *ngIf="isLoading; then thenBlock else elseBlock"></div>
+      <ng-template #thenBlock><fa-icon [spin]="isLoading" class="icon-white fa-spin"
+          [icon]="spinnerIcon"></fa-icon></ng-template>
+      <ng-template #elseBlock><span>Consultar por CPF</span></ng-template>
+
+
+    </button>
+    </div>
+
+    <div *ngIf="userWasFound">
+        <app-user-card [currentUser]="userService.currentUser"></app-user-card>
+    </div>
+
+
+</section>

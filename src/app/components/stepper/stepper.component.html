@@ -1,0 +1,8 @@
+<section class="stepper-wrapper">
+    <div *ngFor="let step of steps;" class="stepper">
+        <div class="stepper-container" [ngClass]="{'active': step === currentStep}">
+            <div class="stepper-circle"></div>
+            <p id="step-{{step.name}}" class="stepper-name">{{ step.name }}</p>
+        </div>
+    </div>
+</section>

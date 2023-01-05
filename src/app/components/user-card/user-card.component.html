@@ -1,0 +1,27 @@
+<section class="user-card-wrapper">
+    <h4>Situação cadastral do CPF</h4>
+    <small>Consulta na Receita Federal</small>
+
+    <div class="user-info-wrapper">
+        <div class="row">
+            <div class="icon">
+                <fa-icon class="icon-gray" [icon]="userIcon"></fa-icon>
+            </div>
+            <div class="info">
+                <small>Nome</small>
+                <p id="current-user-name">{{ currentUser.name }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="icon">
+                <fa-icon class="icon-gray" [icon]="currentUser.isCpfValid ? checkIcon: invalidIcon"></fa-icon>
+            </div>
+            <div class="info">
+                <small>Situação do CPF</small>
+                <p id="current-user-cpf-valid">{{ currentUser.isCpfValid ? 'Regular' : 'Irregular' }}</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>

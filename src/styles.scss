@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    color: #303030;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.icon-white {
+    svg.svg-inline--fa>path {
+        color: white;
+    }
+}
+
+.icon-gray {
+    svg.svg-inline--fa>path {
+        color: gray;
+    }
+}

@@ -1,0 +1,33 @@
+<section class="layout-wrapper">
+    <aside class="sidebar-wrapper">
+        <picture class="logo-wrapper">
+            <img src="/assets/logo-ailos.png" alt="">
+        </picture>
+        <nav class="navbar-wraper" *ngFor="let icon of navIcons">
+            <a href="#" class="link-item">
+                <fa-icon class="icon-white" [icon]="icon"></fa-icon>
+            </a>
+        </nav>
+    </aside>
+    <section class="content-wrapper">
+        <div class="header-wrapper">
+            <div>
+                <h1 class="page-title">{{ pageTitle }}</h1>
+                <div class="breadcrump-wrapper">
+                    <div *ngFor="let item of breadcrumb; index as i">
+                        <a href="#"> {{item}}</a>
+                        <span *ngIf="i !== breadcrumb.length - 1"> /</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <app-stepper [steps]="steps" [currentStep]="currentStep"></app-stepper>
+            <div class="step-content-wrapper">
+                <app-onboarding [currentStep]="currentStep"></app-onboarding>
+            </div>
+        </div>
+
+    </section>
+
+</section>
